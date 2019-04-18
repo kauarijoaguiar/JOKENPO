@@ -1,0 +1,52 @@
+img {
+    margin-right: 20px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%
+}
+ /* todas as img's com a class mao que estão dentro de div */
+div#humano > img.mao {
+    box-shadow: none;
+    transition: box-shadow 0.1s ease;
+}
+div#humano > img.mao:hover {
+    box-shadow: 0 0 20px aqua;
+    transition: box-shadow 0.1s ease;
+}
+div#humano > img.mao.selecionada {
+    background-color: rgba(12, 238, 170, 0.938);
+    transition: background-color 0.1s ease-in;
+}
+div {
+    margin-top: 30px;
+}
+
+div#resultado{
+    color: peru;
+}
+
+div#computador> img.mao.selecionada{
+    background-color: crimson;
+}
+
+button{
+    background-color: purple;
+    border-width: 6px;
+    color: blue;
+    width: 80px;
+    height: 50px;
+}
+
+/*animação*/
+@keyframes carregando{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+      transform: rotate(359deg);
+    }
+}
+
+div#computador img.mao.carregando{
+    /* nome, duração, delay, contagem */
+    animation: carregando 900ms linear 200ms infinite;
+}
